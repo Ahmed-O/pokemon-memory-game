@@ -1,5 +1,8 @@
 import "./App.css";
 import { Link } from "react-router-dom";
+import { Speakers } from "./Speaker";
+import { GiSpeaker } from "react-icons/gi";
+import { GiSpeakerOff } from "react-icons/gi";
 
 function App() {
   // let pokemonPicsSource = [];
@@ -9,9 +12,16 @@ function App() {
   //   );
   // }
 
-  const playAudio = () => {
+  const toggleAudio = () => {
+    console.log("HERE");
     const audio = document.querySelector(".background_song");
-    audio.play();
+    const speakers = document.querySelectorAll(".speaker_icon");
+    console.log(speakers);
+    speakers.forEach((speaker) => {
+      speaker.classList.toggle("active_speaker");
+    });
+    if (audio.paused) audio.play();
+    else audio.pause();
   };
 
   // useEffect(() => {
@@ -26,7 +36,15 @@ function App() {
     // </>
 
     <>
-      <main className="App">
+      <main className="App main_background">
+        <Speakers></Speakers>
+        {/* <div className="speaker_container">
+          <GiSpeakerOff
+            className="speaker_icon active_speaker"
+            onClick={toggleAudio}
+          />
+          <GiSpeaker className="speaker_icon" onClick={toggleAudio} />
+        </div> */}
         <div className="header">
           <img src="pokemon-logo.png" alt="Pokemon Logo" width={"750px"} />
           <h2>Memory Game</h2>
@@ -55,9 +73,12 @@ function App() {
             Hard
           </Link>
         </div>
-        <audio className="background_song" autoPlay>
+        <footer className="footer">
+          <h3>Data from</h3>
+        </footer>
+        {/* <audio className="background_song">
           <source src="SettingOff.mp3" />
-        </audio>
+        </audio> */}
       </main>
     </>
   );

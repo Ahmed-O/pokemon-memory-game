@@ -12,6 +12,27 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* BACKGROUND */
+.main_background {
+    background: radial-gradient(1.5em 6.28571em at 1.95em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 0 0,
+        radial-gradient(1.5em 6.28571em at -0.45em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 1.5em 5.5em,
+        radial-gradient(2.3em 4.57143em at 2.99em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.3) 55%, rgba(255, 255, 255, 0) 55%) 0 0,
+        radial-gradient(2.3em 4.57143em at -0.69em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.3) 55%, rgba(255, 255, 255, 0) 55%) 2.3em 4em,
+        radial-gradient(3.5em 6.28571em at 4.55em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 0 0,
+        radial-gradient(3.5em 6.28571em at -1.05em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 3.5em 5.5em,
+        radial-gradient(#ffd8a9, #ffa83f);
+      background-color: mediumspringgreen;
+      background-size: 1.5em 11em,
+        1.5em 11em,
+        2.3em 8em,
+        2.3em 8em,
+        3.5em 11em,
+        3.5em 11em,
+        100% 100%;
+      background-repeat: repeat;
+}
+
+/* Homepage (App Component) */
 .App {
   position: absolute;
   height: 100%;
@@ -20,27 +41,9 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* top: -50px; */
-
-  /* BACKGROUND */
-  background: radial-gradient(1.5em 6.28571em at 1.95em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 0 0,
-    radial-gradient(1.5em 6.28571em at -0.45em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 1.5em 5.5em,
-    radial-gradient(2.3em 4.57143em at 2.99em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.3) 55%, rgba(255, 255, 255, 0) 55%) 0 0,
-    radial-gradient(2.3em 4.57143em at -0.69em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.3) 55%, rgba(255, 255, 255, 0) 55%) 2.3em 4em,
-    radial-gradient(3.5em 6.28571em at 4.55em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 0 0,
-    radial-gradient(3.5em 6.28571em at -1.05em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 3.5em 5.5em,
-    radial-gradient(#ffd8a9, #ffa83f);
-  background-color: mediumspringgreen;
-  background-size: 1.5em 11em,
-    1.5em 11em,
-    2.3em 8em,
-    2.3em 8em,
-    3.5em 11em,
-    3.5em 11em,
-    100% 100%;
-  background-repeat: repeat;
 }
 
+/* Homepage initial load animation */
 @keyframes fadeIn {
   0% {
     opacity: 0
@@ -92,23 +95,31 @@ body {
   box-shadow: 10px 10px;
 }
 
-/* .game_difficulty a {
-  text-decoration: none;
-  font-size: 1.5vw;
-  font-weight: 700;
-  color: #3b4cca;
-  border: solid 2px #3b4cca;
-  padding: 5px 15px;
-  background-color: #ffde00;
-  box-shadow: 10px 10px;
-} */
-
 .pokemon_btn:hover {
   box-shadow: 5px 5px;
 }
 
+/* Speaker */
+.speaker_container {
+  /* display: flex;
+  justify-content: flex-end;
+  width: 95vw; */
+  position: absolute;
+  top: 10px;
+  right: 25px;
+}
 
-/* Game component */
+.speaker_icon {
+  font-size: 36px;
+  color: black;
+  display: none;
+}
+
+.active_speaker {
+  display: flex;
+}
+
+/* Game Component */
 .Game {
   display: flex;
   flex-direction: column;
@@ -160,22 +171,4 @@ body {
   justify-content: center;
   align-items: center;
   gap: 25px;
-
-  /* BACKGROUND */
-  background: radial-gradient(1.5em 6.28571em at 1.95em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 0 0,
-    radial-gradient(1.5em 6.28571em at -0.45em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 1.5em 5.5em,
-    radial-gradient(2.3em 4.57143em at 2.99em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.3) 55%, rgba(255, 255, 255, 0) 55%) 0 0,
-    radial-gradient(2.3em 4.57143em at -0.69em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.3) 55%, rgba(255, 255, 255, 0) 55%) 2.3em 4em,
-    radial-gradient(3.5em 6.28571em at 4.55em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 0 0,
-    radial-gradient(3.5em 6.28571em at -1.05em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 3.5em 5.5em,
-    radial-gradient(#ffd8a9, #ffa83f);
-  background-color: mediumspringgreen;
-  background-size: 1.5em 11em,
-    1.5em 11em,
-    2.3em 8em,
-    2.3em 8em,
-    3.5em 11em,
-    3.5em 11em,
-    100% 100%;
-  background-repeat: repeat;
 }

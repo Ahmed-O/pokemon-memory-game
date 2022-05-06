@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function GameOver({ winStatus }) {
   return (
-    <div className="GameOver">
+    <div className="GameOver main_background">
       <div className="gameover_status">
         {winStatus ? (
           <h2 className="win_status">Game Over: You Won!</h2>
