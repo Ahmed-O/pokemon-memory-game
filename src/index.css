@@ -14,22 +14,24 @@ body {
 
 /* BACKGROUND */
 .main_background {
-    background: radial-gradient(1.5em 6.28571em at 1.95em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 0 0,
-        radial-gradient(1.5em 6.28571em at -0.45em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 1.5em 5.5em,
-        radial-gradient(2.3em 4.57143em at 2.99em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.3) 55%, rgba(255, 255, 255, 0) 55%) 0 0,
-        radial-gradient(2.3em 4.57143em at -0.69em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.3) 55%, rgba(255, 255, 255, 0) 55%) 2.3em 4em,
-        radial-gradient(3.5em 6.28571em at 4.55em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 0 0,
-        radial-gradient(3.5em 6.28571em at -1.05em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 3.5em 5.5em,
-        radial-gradient(#ffd8a9, #ffa83f);
-      background-color: mediumspringgreen;
-      background-size: 1.5em 11em,
-        1.5em 11em,
-        2.3em 8em,
-        2.3em 8em,
-        3.5em 11em,
-        3.5em 11em,
-        100% 100%;
-      background-repeat: repeat;
+  background: radial-gradient(1.5em 6.28571em at 1.95em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 0 0,
+      radial-gradient(1.5em 6.28571em at -0.45em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 1.5em 5.5em,
+      radial-gradient(2.3em 4.57143em at 2.99em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.3) 55%, rgba(255, 255, 255, 0) 55%) 0 0,
+      radial-gradient(2.3em 4.57143em at -0.69em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.3) 55%, rgba(255, 255, 255, 0) 55%) 2.3em 4em,
+      radial-gradient(3.5em 6.28571em at 4.55em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 0 0,
+      radial-gradient(3.5em 6.28571em at -1.05em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 3.5em 5.5em,
+      radial-gradient(#ffd8a9, #ffa83f);
+    background-color: mediumspringgreen;
+    background-size: 1.5em 11em,
+      1.5em 11em,
+      2.3em 8em,
+      2.3em 8em,
+      3.5em 11em,
+      3.5em 11em,
+      100% 100%;
+    background-repeat: repeat;
+  height: 100%;
+    width: 100%;
 }
 
 /* Homepage (App Component) */
@@ -39,7 +41,7 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -62,6 +64,9 @@ body {
   animation: fadeIn 1s ease-in forwards;
 }
 
+.header>img {
+  width: 50vw;
+}
 .header h2 {
   font-size: 3vw;
   padding: 5px 10px;
@@ -80,7 +85,7 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 30px 5px;
-  width: 500px;
+  width: 50vw;
   animation: fadeIn 1.5s ease-in forwards;
 }
 
@@ -101,12 +106,9 @@ body {
 
 /* Speaker */
 .speaker_container {
-  /* display: flex;
-  justify-content: flex-end;
-  width: 95vw; */
-  position: absolute;
-  top: 10px;
-  right: 25px;
+width: 100%;
+  padding-top: 25px;
+  padding-left: 50px;
 }
 
 .speaker_icon {
@@ -123,13 +125,25 @@ body {
 .Game {
   display: flex;
   flex-direction: column;
+  animation: fadeIn 1s ease-in forwards;
 }
 
 .game_header {
   display: flex;
   justify-content: space-between;
-  padding: 10px 25px;
-}
+  padding: 10px 150px 0 50px;
+  }
+  
+  .game_header_left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .countdown_timer {
+    font-size: 24px;
+    font-weight: 500;
+  }
 
 .gameboard {
   display: flex;
@@ -143,23 +157,39 @@ body {
   visibility: hidden;
 }
 
+@keyframes onGameStart {
+  0% {
+    /* transform: rotateX(280deg); */
+    opacity: 0;
+  }
+
+  100% {
+    /* transform: rotateX(360deg); */
+    opacity: 1;
+  }
+}
 .Card {
   border: solid 3px black;
   border-radius: 10px;
   background-color: #f5f5f5;
-  width: 300px;
+  width: 250px;
   height: 150px;
   position: relative;
-  /* transform: rotateX(180deg); */
   transform: scaleX(-1);
   transition: 0.3s ease-in;
+  /* transform: scaleY(-1); */
 
 }
 
+.Card:hover {
+  cursor: pointer;
+}
 .Card.back_card {
   content: url("whos_that_pokemon.jpg");
   transform: rotateX(360deg);
+  
 }
+  
 
 /* GameOver Page */
 .GameOver {
@@ -168,7 +198,21 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    animation: fadeIn 1s ease-in forwards;
+  }
+  
+  .gameover_status_container {
+    display: flex;
+    flex-direction: column;
   align-items: center;
   gap: 25px;
+}
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
 }
