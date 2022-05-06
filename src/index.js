@@ -3,11 +3,20 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Game from "./Game";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />}></Route>
+        <Route path="/easy" element={<Game timeAllowed={180000} />}></Route>
+        <Route path="/medium" element={<Game timeAllowed={60000} />}></Route>
+        <Route path="/hard" element={<Game timeAllowed={30000} />}></Route>
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
