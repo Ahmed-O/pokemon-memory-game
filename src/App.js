@@ -1,16 +1,18 @@
 import "./App.css";
 import { Link } from "react-router-dom";
 import Speaker from "./Speaker";
+import pokemonHeader from "../src/images/pokemon-header.png";
+import menuAudio from "./audio/SettingOff.mp3";
 
 function App() {
   return (
     <>
       <main className="App main_background">
         <div className="speaker_container">
-          <Speaker source={"SettingOff.mp3"}></Speaker>
+          <Speaker source={menuAudio}></Speaker>
         </div>
         <div className="header">
-          <img src="pokemon-logo.png" alt="Pokemon Logo" />
+          <img src={pokemonHeader} alt="Pokemon Logo" />
           <h2>Memory Game</h2>
         </div>
         <div className="game_difficulty">

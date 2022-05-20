@@ -8,12 +8,11 @@ function Speaker({ source }) {
     const speakers = document.querySelectorAll(".speaker_icon");
     const activeSpeaker = document.querySelector(".active_speaker");
 
-    // Toggle audio depending on whuch speaker is active
-
+    // Toggle background audio depending on which speaker is active
     if (activeSpeaker.classList.contains("on_speaker")) audio.pause();
     else audio.play();
 
-    // Changing active speaker class
+    // Changing active speaker class to change displayed icon
     speakers.forEach((speaker) => {
       speaker.classList.toggle("active_speaker");
     });

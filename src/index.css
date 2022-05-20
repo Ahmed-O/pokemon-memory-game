@@ -185,7 +185,7 @@ width: 100%;
   cursor: pointer;
 }
 .Card.back_card {
-  content: url("whos_that_pokemon.jpg");
+  content: url("./images/whos_that_pokemon.jpg");
   transform: rotateX(360deg);
   
 }

@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Speaker from "./Speaker";
+import menuAudio from "./audio/SettingOff.mp3";
 
 function GameOver({ winStatus }) {
   return (
     <div className="GameOver main_background">
       <div className="speaker_container">
-        <Speaker source={"SettingOff.mp3"}></Speaker>
+        <Speaker source={menuAudio}></Speaker>
       </div>
       <div className="gameover_status_container">
         <div className="gameover_status">

@@ -5,8 +5,13 @@ import { getPokemon } from "./getPokemon.js";
 import Countdown from "react-countdown";
 import GameOver from "./GameOver.js";
 import Speaker from "./Speaker";
+import gamePlayAudio from "./audio/battlevstrainer.mp3";
 
+// Get the pokemon array for the game
+// Done outside the component so re-render won't change the pokemon
 const pokemonIDs = getPokemon();
+// Current time needed for the timer
+// Also done outside component to prevent change on re-render
 const currDate = Date.now();
 
 function Game({ timeAllowed }) {
@@ -17,6 +22,7 @@ function Game({ timeAllowed }) {
   const [gameOver, setGameOver] = useState(false);
   const [winStatus, setWinStatus] = useState(false);
 
+  // Gameboard array of Card components based on the pokemonIDs array
   let gameBoard = [];
   for (let i = 0; i < 20; i++) {
     gameBoard.push(
@@ -31,6 +37,7 @@ function Game({ timeAllowed }) {
     );
   }
 
+  // Hook to handle game functionality/logic
   useEffect(() => {
     if (firstPick && secondPick) {
       // If user selected a matching pair
@@ -67,7 +74,8 @@ function Game({ timeAllowed }) {
     }
   });
 
-  const countdownRender = ({ minutes, seconds, completed, start }) => {
+  // Render function for the react countdown package
+  const countdownRender = ({ minutes, seconds, completed }) => {
     if (completed) {
       setGameOver(true);
     } else {
@@ -114,7 +122,7 @@ function Game({ timeAllowed }) {
                   ref={ref}
                 />
               </div>
-              <Speaker source={"battlevstrainer.mp3"}></Speaker>
+              <Speaker source={gamePlayAudio}></Speaker>
             </div>
           </header>
           <div className="gameboard" onClick={startGame}>
