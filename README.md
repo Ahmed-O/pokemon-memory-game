@@ -21,7 +21,7 @@ The user much match all of the pokemon cards before the timer runs out to win. T
 
 
 # Technical Details 
-<ins>Languages</ins>: JSX, CSS, Javascript
+<ins>Languages</ins>: JSX, CSS, Javascript  
 <ins>Libraries/Dependencies</ins>: React, React Router, React Countdown, React Icons  
 (Images from PokeAPI (https://pokeapi.co/) and Music from Pokemon Pocket Monsters Sound Anime Collection)  
 
